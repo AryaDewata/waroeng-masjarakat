@@ -41,6 +41,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 10px;
 }
 #loading-image {
   width: 150px;
@@ -88,18 +89,20 @@ html {
 ====== Navigation ======
 */
 nav {
-  padding: 20px 5%;
+  padding: 5px 5%;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 100;
   width: 100%;
-  height: 5%;
+  height: 10%;
   display: flex;
 
   background: white;
   box-shadow: 1px 1px 3px black;
-  font-size: 24px;
   opacity: 0;
+
+  font-size: 24px;
+
   transition: 800ms;
 }
 .nav--alt {
@@ -120,9 +123,6 @@ nav a {
 .nav-logo {
   height: 100%;
 }
-.nav-logo img {
-  height: 100%;
-}
 @media (max-width: 480px) {
   nav {
     font-size: 20px;
@@ -141,7 +141,7 @@ nav a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1px;
+  gap: 6px;
 
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("https://static.wixstatic.com/media/028265_c3736235aa62426195df7c05a4df62c6~mv2.jpg/v1/fill/w_1962,h_1202,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/028265_c3736235aa62426195df7c05a4df62c6~mv2.jpg");
@@ -162,7 +162,23 @@ nav a {
   font-size: 16px;
   color: rgb(200, 200, 200);
 }
+.social-links {
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
 
+  display: flex;
+  justify-content: center;
+}
+.social-links li a {
+  color: white;
+  text-shadow: 1px 2px black;
+  font-size: 20px;
+  margin: 0 10px;
+}
+.social-links li a i:hover {
+  opacity: 50%;
+}
 @media (max-width: 480px) {
   #header h1 {
     font-size: 38px;
