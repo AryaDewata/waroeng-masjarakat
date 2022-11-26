@@ -5,74 +5,306 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="https://github.com/aryadewata">
 
     <!-- Title -->
-    <title>Layout</title>
+    <title>Waroeng Masjarakat</title>
 
     <!-- Style -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Favicom -->
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
 
+    <!-- Loading -->
+    <div id="loading">
+        <img id="loading-image" src="loading.gif" alt="Loading..." />
+    </div>
+
     <!-- Container -->
     <div class="container">
 
+        <!-- Navigation -->
+        <nav id="navigation">
+            <a href="#" title="logo waroeng masjarakat">
+                <img class="nav-logo" src="logo.png" alt="logo waroeng masjarakat">
+            </a>
+            <div class="nav-text">
+                <a href="#">Waroeng Masjarakat</a>
+            </div>
+        </nav>
+
         <!-- Header Section -->
         <section id="header">
-            <h1>Waroeng Masjarakat</h1>
-            <p>Waroeng Masjarakat adalah website katalog yang berisi resep menu masakan masyarakat.</p>
-            <ul>
-                <li><a href="#menu" title="klik untuk melihat daftar menu yang tersedia">Daftar Menu</a></li>
-            </ul>
+            <h1 class="js-scroll fade-in-bottom scrolled">Waroeng Masjarakat</h1>
+            <p class="js-scroll fade-in-bottom scrolled">Waroeng Masjarakat merupakan sebuah situs web katalog yang
+                berisi resep-resep masakan masyarakat
+                Nusantara</p>
         </section>
 
         <!-- Menu Section -->
         <section id="menu">
-            <h1 class="header-text">Daftar Menu :</h1>
-
+            <h1 class="header-text js-scroll fade-in-bottom">Daftar Masakan :</h1>
             <div class="row">
-                <div class="card">
+                <a href="https://resepkoki.id/resep/resep-sate-kambing/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
                     <div class="picture">
-                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2017/04/Resep-Sate-kambing.jpg?fit=500%2C333&ssl=1"
-                            alt="">
+                        <img src="https://resepkoki.id/wp-content/uploads/2017/04/Resep-Sate-kambing.jpg" alt="">
                     </div>
                     <div class="card-text">
                         <p>Sate Kambing</p>
                     </div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="https://resepkoki.id/resep/resep-lidah-sapi-cabe-hijau/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
                     <div class="picture">
-                        <img src="https://www.bango.co.id/gfx/recipes/1460572810.jpg" alt="">
-                    </div>
-                    <div class="card-text">
-                        <p>Nasi Goreng</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="picture">
-                        <img src="https://img.kurio.network/OpH6XcpyRpN0qV_bjh4Xp8sKOx0=/1200x900/filters:quality(80)/https://kurio-img.kurioapps.com/20/11/21/b2aecfb2-fefd-415f-9424-2485a95d41ef.png"
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2021/02/Resep-Lidah-sapi-cabe-ijo.jpg?fit=640%2C853&ssl=1"
                             alt="">
                     </div>
                     <div class="card-text">
-                        <p>Pecel Lele</p>
+                        <p>Lidah Sapi Cabe Hijau</p>
                     </div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="https://resepkoki.id/resep/resep-sate-telur-puyuh/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
                     <div class="picture">
-                        <img src="https://img.kurio.network/XDSKUXU6bo8jpXeUquntZOZEfRo=/1200x1200/filters:quality(80)/https://kurio-img.kurioapps.com/21/02/18/641ccc74-5cc5-4f63-8a0f-75070e939452.jpe"
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2017/09/Resep-Sate-telur-puyuh.jpg?fit=640%2C570&ssl=1"
                             alt="">
                     </div>
                     <div class="card-text">
-                        <p>Ikan Bakar</p>
+                        <p>Sate Telur Puyuh</p>
                     </div>
-                </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-ikan-mas-bakar/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2021/11/Resep-Ikan-Mas-Bakar.jpg?fit=640%2C853&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Ikan Mas Bakar</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-tutut-kuah-kuning/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2022/06/Resep-Tutut-Kuah-Kuning.jpg?fit=640%2C853&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Tutut Kuah Kuning</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-ayam-bacem/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2022/04/Resep-Ayam-Bacem.jpg?fit=640%2C799&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Ayam Bacem</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-ikan-nila-goreng/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2022/03/Resep-Ikan-Nila-Goreng.jpg?fit=640%2C853&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Ikan Nila Goreng</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-telur-geprek/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2022/01/Resep-Telur-Geprek.jpg?fit=640%2C800&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Telur Geprek</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-papeda-gulung/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2021/10/Resep-Papeda-Gulung.jpg?fit=640%2C853&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Papeda Gulung</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-burung-puyuh-bakar/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2021/06/Resep-Puyuh-Bakar.jpg?fit=640%2C800&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Burung Puyuh Bakar</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-ayam-kecap/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2019/11/Ayam-Kecap.jpg?fit=640%2C800&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Ayam Kecap</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-gulai-telur-tahu/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2022/01/Resep-Gulai-Telur-Tahu.jpg?fit=640%2C853&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Gulai Telur Tahu</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-ceker-rica-rica/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2022/01/Resep-Ceker-Rica.jpg?fit=640%2C800&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Ceker Rica-Rica</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-ayam-goreng-madu/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2021/12/Resep-Ayam-Goreng-Madu.jpg?fit=640%2C853&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Ayam Goreng Madu</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-laksa-bogor/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2021/04/Resep-Laksa-Bogor.jpg?fit=640%2C853&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Laksa Bogor</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-terong-balado/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2021/11/Resep-Terong-Balado.jpg?fit=640%2C852&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Terong Balado</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-opor-telur/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2021/11/Resep-Opor-Telur.jpg?fit=640%2C853&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Opor Telur</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-nasi-tomat/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2021/06/Resep-Nasi-Tomat.jpg?fit=640%2C853&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Nasi Tomat</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-rajungan-asam-manis/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2021/06/Resep-Rajungan-Asam-Manis-scaled.jpg?fit=640%2C898&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Rajungan Asam Manis</p>
+                    </div>
+                </a>
+                <a href="https://resepkoki.id/resep/resep-lontong-medan/" target="_blank"
+                    class="card js-scroll fade-in-bottom">
+                    <div class="picture">
+                        <img src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2021/04/Resep-Lontong-Medan.jpg?fit=640%2C800&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>Lontong Medan</p>
+                    </div>
+                </a>
             </div>
         </section>
 
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2022. <a href="https://instagram.com/madearyaaastawa" target="_blank">Made Arya Astawa</a>. All
+                Rights Reserved.</p>
+            <p>Supported by <a href="https://resepkoki.id" target="_blank">resepkoki.id</a></p>
+        </footer>
+
     </div>
 
+    <!-- Javascript -->
+    <script>
+        $(window).on('load', function () {
+            setTimeout(() => {
+                $('#loading').hide();
+            }, 3000)
+        })
+        const nav = document.querySelector('#navigation');
+        const scrollElements = document.querySelectorAll(".js-scroll");
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend;
+        };
+        const elementOutofView = (el) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return elementTop > (window.innerHeight || document.documentElement.clientHeight);
+        };
+        const displayScrollElement = (element) => {
+            element.classList.add("scrolled");
+        };
+        const hideScrollElement = (element) => {
+            // element.classList.remove("scrolled");
+        };
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                } else if (elementOutofView(el)) {
+                    hideScrollElement(el)
+                }
+            })
+        }
+        window.addEventListener("scroll", () => {
+            handleScrollAnimation();
+            if (document.documentElement.scrollTop > 200)
+                nav.classList.add("nav--alt");
+            else
+                nav.classList.remove("nav--alt");
+        });
+    </script>
 </body>
 
 </html>

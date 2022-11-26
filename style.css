@@ -1,97 +1,174 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 /* Style reset */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
-  font-family: "Nunito";
+  outline: none;
 }
 html {
+  font-family: "Nunito";
   scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  box-shadow: inset 1px 1px 2px grey;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: rgb(240, 190, 60);
+  box-shadow: inset 1px 1px 2px black;
+}
+
+/* 
+====== Loading Screen ======
+*/
+#loading {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  text-align: center;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#loading-image {
+  width: 150px;
+  margin: 0 auto;
+}
+
+/* 
+====== Animation ======
+*/
+.js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.js-scroll.scrolled {
+  opacity: 1;
+}
+.scrolled.fade-in-bottom {
+  animation: fade-in-bottom 1000ms ease-in-out both;
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* 
 <------ Container Style ------>
 */
-.container {
-  width: 100%;
-}
 .header-text {
-  margin: 10px 20px;
-  font-size: 22px;
-  color: rgb(50, 50, 50);
+  margin: 0 0 20px;
+  font-family: "Patrick Hand";
+  color: rgb(240, 190, 60);
+  text-shadow: 1px 1px black;
+  text-align: center;
+}
+
+/* 
+====== Navigation ======
+*/
+nav {
+  padding: 20px 5%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 5%;
+  display: flex;
+
+  background: white;
+  box-shadow: 1px 1px 3px black;
+  font-size: 24px;
+  opacity: 0;
+  transition: 800ms;
+}
+.nav--alt {
+  opacity: 100%;
+}
+.nav-text {
+  margin: 0 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav a {
+  color: rgb(240, 190, 60);
+  font-family: "Patrick Hand";
+  text-decoration: none;
+}
+.nav-logo {
+  height: 100%;
+}
+.nav-logo img {
+  height: 100%;
+}
+@media (max-width: 480px) {
+  nav {
+    font-size: 20px;
+  }
+  .nav-text {
+    margin: 0 12px;
+  }
 }
 
 /* 
 <------ Header Section Style ------>
 */
 #header {
-  height: 100vh;
+  padding: 100px 10px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2px;
+  gap: 1px;
 
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://wallpapercave.com/wp/wp6301034.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://static.wixstatic.com/media/028265_c3736235aa62426195df7c05a4df62c6~mv2.jpg/v1/fill/w_1962,h_1202,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/028265_c3736235aa62426195df7c05a4df62c6~mv2.jpg");
   background-size: cover;
   background-position: center;
-  border-bottom: 1px solid black;
 
   text-align: center;
 }
 #header h1 {
-  font-size: 48px;
-  font-weight: 300;
-  color: rgb(230, 190, 0);
+  font-size: 58px;
+  font-weight: lighter;
+  color: rgb(240, 190, 60);
+  font-family: "Patrick Hand";
+  letter-spacing: 1px;
   text-shadow: 1px 2px black;
 }
 #header p {
-  margin: 0 0 20px;
-  font-size: 14px;
-  color: rgb(170, 170, 170);
-}
-#header ul {
-  list-style: none;
-
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-#header ul li a {
-  padding: 4px 20px;
-
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  border-radius: 2px;
-  border: 2px solid rgb(200, 200, 200);
-
+  font-size: 16px;
   color: rgb(200, 200, 200);
-  text-decoration: none;
-
-  transition: 300ms;
-}
-#header ul li a:hover {
-  opacity: 75%;
 }
 
 @media (max-width: 480px) {
-  #header {
-    padding: 0 20px;
-  }
   #header h1 {
-    font-size: 32px;
+    font-size: 38px;
   }
   #header p {
-    font-size: 13px;
-  }
-  #header ul {
-    gap: 15px;
-  }
-  #header ul li a {
-    padding: 3px 15px;
+    font-size: 12px;
   }
 }
 
@@ -99,21 +176,21 @@ html {
 <------ Menu Section Style ------>
 */
 #menu {
-  padding: 20px;
+  padding: 40px;
 }
 .row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
 }
 .card {
   cursor: pointer;
   position: relative;
   aspect-ratio: 1 / 1;
-  height: 200px;
+  height: 140px;
 
-  box-shadow: 1px 2px 3px rgb(78, 78, 78);
+  box-shadow: 1px 2px 3px black;
   transition: 1000ms;
 }
 /* Card Picture */
@@ -122,25 +199,55 @@ html {
   overflow: hidden;
 }
 .picture img {
-  height: 100%;
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  transform: scale(1.4);
   transition: 1000ms;
 }
 .card:hover .picture img {
-  transform: scale(1.3);
-  filter: brightness(0.5);
+  transform: scale(1.7);
+  filter: brightness(0.4);
 }
 .card:hover .card-text {
   opacity: 100%;
 }
 /* Card text */
 .card-text {
+  padding: 0 5px;
   position: absolute;
   width: 100%;
   top: 50%;
 
-  font-size: 16px;
-  color: rgb(200, 200, 200);
+  font-size: 14px;
+  color: rgb(230, 230, 230);
   text-align: center;
   opacity: 0%;
   transition: 1000ms;
+}
+
+/* 
+<------ Footer Style ------>
+*/
+footer {
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+
+  background: rgb(60, 60, 60);
+
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+footer a {
+  color: rgb(240, 190, 60);
+}
+@media (max-width: 480px) {
+  footer {
+    font-size: 11px;
+  }
 }
